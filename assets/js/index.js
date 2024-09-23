@@ -68,7 +68,8 @@ const heroBanner = function ({ results: movieList }) {
       vote_average,
       id,
     } = movie;
-
+    let shortDescription =
+      overview.length > 200 ? overview.slice(0, 200) + "..." : overview;
     const sliderItem = document.createElement("div");
     sliderItem.classList.add("slider-item");
     sliderItem.setAttribute("slider-item", "");
@@ -83,7 +84,7 @@ const heroBanner = function ({ results: movieList }) {
           <div class="meta-item">${release_date.split("-")[0]}</div>
           <div class="meta-item card-badge">${vote_average.toFixed(1)}</div>
           <p class="genre">${genreList.asString(genre_ids)}</p>
-          <p class="banner-text">${overview}</p>
+          <p class="banner-text">${shortDescription}</p>
           <a href="detail.html" class="btn" onclick="getMovieDetail(${id})">
             <img src="assets/images/play_circle.png" width="24" height="24"
               aria-hidden="true" alt="" />
