@@ -124,7 +124,7 @@ fetchDataFromServer(
       videoCard.classList.add("video-card");
       videoCard.innerHTML = `
         <iframe width="500" height="294"
-          src="http://www.youtube.com/embed/${key}?theme=dark&color=white&rel=0"
+          src="https://www.youtube.com/embed/${key}?theme=dark&color=white&rel=0"
           frameborder="0" allowfullscreen="1" title="${name}" class="img-cover" loading="lazy"></iframe>
       `;
       movieDetail.querySelector(".slider-inner").appendChild(videoCard);

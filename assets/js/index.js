@@ -109,7 +109,7 @@ const heroBanner = function ({ results: movieList }) {
   addHeroSlide();
   for (const { title, path } of homePageSections) {
     fetchDataFromServer(
-      `http://api.themoviedb.org/3${path}?api_key=${api_key}&page=1`,
+      `https://api.themoviedb.org/3${path}?api_key=${api_key}&page=1`,
       createMovieList,
       title
     );
